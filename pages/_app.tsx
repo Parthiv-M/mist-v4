@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { AnimatePresence } from 'framer-motion';
-import AOS from 'aos';
+const AOS = require('aos');
 
 // import aos styles
 import 'aos/dist/aos.css';
