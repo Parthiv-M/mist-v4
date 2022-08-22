@@ -10,11 +10,6 @@ const Footer = () => {
                         </a>
                     </p>
                     <p className="text-neutral-400 hover:text-neutral-300">
-                        <a href="https://events.wearemist.in" target="_blank" rel="noreferrer">
-                            MIST Events
-                        </a>
-                    </p>
-                    <p className="text-neutral-400 hover:text-neutral-300">
                         <a href="https://cybermanipal.wearemist.in" target="_blank" rel="noreferrer">
                             Cybermanipal
                         </a>
@@ -47,7 +42,17 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="flex flex-col items-start gap-2 text-sm">
-                    <h5 className="text-neutral-600 font-bold">Content where?</h5>
+                    <h5 className="text-neutral-600 font-bold">Fun and Frolic</h5>
+                    <p className="text-neutral-400 hover:text-neutral-300">
+                        <a href="https://events.wearemist.in" target="_blank" rel="noreferrer">
+                            MIST Events
+                        </a>
+                    </p>
+                    <p className="text-neutral-400 hover:text-neutral-300">
+                        <a href="/originals">
+                            MIST Originals
+                        </a>
+                    </p>
                 </div>
             </div>
             <div className="w-full mt-12 flex items-center">

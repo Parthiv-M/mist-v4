@@ -1,11 +1,12 @@
 import { SITE_DOMAIN } from "../utils/constants";
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { GetStaticProps } from "next";
 
 // importing components
 import AnnouncementCard from "../components/announcementCard";
 import AnnouncementModal from "../components/announcementModal";
 import PageHeader from "../components/pageHeader";
+import Meta from "../components/meta";
 
 const Announcements = (props: any) => {
 
@@ -14,14 +15,12 @@ const Announcements = (props: any) => {
 
     return (
         <div className="text-center container mx-auto text-gray-50 py-20 min-h-screen">
-            {/* Logo section */}
-            {/* <div className="text-left w-100 pl-0 md:pl-10">
-                <h1 className=" text-4xl emphasis-heading pl-5">Announcements.</h1>
-                <p className="text-sm font-thin emphasis-heading text-gray-600 pl-6">
-                    Club activity from MIST
-                </p>
-            </div> */}
-            <PageHeader title="Announcements" subtitle="Club updates from MIST." isCenter={false}/>
+            <PageHeader title="Announcements" subtitle="Club updates from MIST." isCenter={false} />
+            <Meta
+                title="Announcements | MIST"
+                description="Stay abreast of what is happening in the club by keeping track of the club announcements"
+                extraKeywords="announcements, club news, activities"
+            />
             {showModal && <AnnouncementModal
                 heading={modalDetails.heading}
                 date={modalDetails.date}

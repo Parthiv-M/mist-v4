@@ -8,6 +8,7 @@ import { SITE_DOMAIN } from "../utils/constants";
 import AlumniCard from "../components/alumniCard";
 import Meta from "../components/meta";
 import PageHeader from "../components/pageHeader";
+
 import { motion } from "framer-motion"
 
 const transition: Object = { ease: [0.43, 0.13, 0.23, 0.96] }

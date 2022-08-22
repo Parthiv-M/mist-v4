@@ -10,6 +10,7 @@ const navigation = [
   { name: "Team", match: "team", href: "/team" },
   { name: "Announcements", match: "announcements", href: "/announcements" },
   { name: "Alumni", match: "alumni", href: "/alumni" },
+  { name: "Originals", match: "originals", href: "/originals" },
   {
     name: "Events",
     match: "na",

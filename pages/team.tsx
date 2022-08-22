@@ -73,7 +73,7 @@ const Team = (props: any) => {
 
             {/* Rendering WorkComm section */}
             <div className="pt-20">
-            <div className="flex gap-2 justify-center items-center">
+                <div className="flex gap-2 justify-center items-center">
                     <div className="h-6 w-10 bg-neutral-100 reverse-gradient-block rounded-l-full"></div>
                     <h2 className="text-3xl text-neutral-300 uppercase tracking-widest font-extrabold">
                         The Working Committee

@@ -6,6 +6,7 @@ import { WCProps } from "./Team";
 import { IconBarProps } from "./Icons";
 import { IconProps } from "./Icons";
 import PageHeaderProps from "./PageHeader";
+import OriginalsProps from "./Originals";
 
 export type {
     MetaProps,
@@ -15,5 +16,6 @@ export type {
     WCProps,
     IconBarProps,
     IconProps,
-    PageHeaderProps
+    PageHeaderProps,
+    OriginalsProps
 }
