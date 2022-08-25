@@ -2,9 +2,9 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import { AnimatePresence } from 'framer-motion';
 const AOS = require('aos');
+import Script from 'next/script';
 
 // import aos styles
 import 'aos/dist/aos.css';
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     // here you can add your aos options
     AOS.init({
-      offset: 100,
+      // offset: 100,
     });
   }, []);
 
@@ -43,9 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
   return (
     <>
-      <Head>
-        <script src="https://kit.fontawesome.com/bd63cd3620.js" crossOrigin="anonymous"></script>
-      </Head>
+      <Script src='https://kit.fontawesome.com/bd63cd3620.js' />
       <Navbar />
       <AnimatePresence mode='wait' onExitComplete={handleExitComplete}>
         {pageLoading ? (
