@@ -14,22 +14,48 @@ const Home: NextPage = () => {
     )
   }
 
+  const SlantCard = (props: {
+    title: string,
+    description: string,
+    rotate: string,
+    image: string
+  }) => {
+    return (
+      <div className={`col-span-1 md:border-r md:border-t md:rounded-tr-lg md:border-0 border-b pb-5 border-neutral-700 md:opacity-50 
+          hover:opacity-100 h-full md:${props?.rotate} p-3`}>
+        <h3 className="text-xl font-bold text-neutral-200">{props?.title}</h3>
+        <img className="mt-2 rounded-lg" alt={props?.title} src={props?.image}></img>
+        <p className="text-neutral-300 mt-2">
+          {props?.description}
+        </p>
+      </div>
+    )
+  }
+
   return (
     <div className="mx-auto min-h-screen pt-20">
       <div className="bg-neutral-900/80 backdrop-filter backdrop-blur-lg min-h-screen w-screen">
         <div className="gradient-back flex flex-col items-center justify-center md:px-16 py-20 min-h-screen w-screen">
-          <div className="w-2/3 flex justify-center items-center gap-2 hover:gap-4 mx-auto trasition ease-in-out duration-500">
+          <div className="w-2/3 flex md:flex-row flex-col justify-center items-center gap-2 hover:gap-4 mx-auto trasition ease-in-out duration-500">
             <div data-aos="fade-left" className="text-right text-neutral-600/25 md:block hidden">
-              <h1 className="md:text-6xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">CTF</h1>
-              <h2 className="md:text-6xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">NETSEC</h2>
-              <h1 className="md:text-6xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">PENTESTING</h1>
-              <h1 className="md:text-6xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">DEV</h1>
+              <h1 className="md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">CTF</h1>
+              <h2 className="md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">NETSEC</h2>
+              <h1 className="md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">PENTESTING</h1>
+              <h1 className="md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">DEV</h1>
             </div>
-            <div data-aos="fade-right">
-              <h1 className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">MANIPAL</h1>
-              <h1 className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">INFORMATION</h1>
-              <h2 className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">SECURITY</h2>
-              <h1 className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">TEAM</h1>
+            <div>
+              <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">MANIPAL</h1>
+              <div data-aos="fade-left" className="flex gap-3 md:hidden block">
+                <h1 className="text-neutral-600/25 md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">CTF</h1>
+                <h1 className="text-neutral-600/25 md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">NETSEC</h1>
+              </div>
+              <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">INFORMATION</h1>
+              <h2 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">SECURITY</h2>
+              <h1 data-aos="fade-right" className="md:hidden block text-neutral-600/25 md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">PENTESTING</h1>
+              <div className="flex gap-3">
+                <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 ease-in-out duration-500">TEAM</h1>
+                <h1 data-aos="fade-left" className="md:hidden block text-neutral-600/25 md:text-6xl text-4xl font-extrabold hover:text-neutral-600/40 hover:mr-3 ease-in-out duration-500">DEV</h1>
+              </div>
             </div>
           </div>
           <div className="mt-16 text-center">
@@ -93,35 +119,33 @@ const Home: NextPage = () => {
             <div className="col-span-1 pr-10 h-full">
               <div data-aos="slide-right" className="bg-neutral-900 h-1/2 rounded-r-full"></div>
             </div>
-            <div className="col-span-1 bg-neutral-300/60 opacity-50 hover:opacity-100 h-full md:rotate-6 p-3 rounded-lg">
-              <h3 className="text-xl font-bold text-neutral-900">Capture the Flag</h3>
-              <img className="mt-2 rounded-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"></img>
-              <p className="text-neutral-900 mt-2">
-                A cyber security Capture The Flag(CTF) event is a competition between security
+            <SlantCard
+              title="Capture the Flag"
+              description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training.
-              </p>
-            </div>
-            <div className="col-span-1 bg-neutral-300/40 opacity-50 hover:opacity-100 h-full md:rotate-6 p-3 rounded-lg">
-              <h3 className="text-xl font-bold text-neutral-900">Capture the Flag</h3>
-              <img className="mt-2 rounded-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"></img>
-              <p className="text-neutral-900 mt-2">
-                A cyber security Capture The Flag(CTF) event is a competition between security
+                the tools they have learned during their training."
+              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+              rotate="rotate-6"
+            />
+            <SlantCard
+              title="Capture the Flag"
+              description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training.
-              </p>
-            </div>
-            <div className="col-span-1 bg-neutral-300/20 opacity-50 hover:opacity-100 h-full md:rotate-6 rounded-lg p-3">
-              <h3 className="text-xl font-bold text-neutral-400">Cybersecurity for everyone</h3>
-              <img className="mt-2 rounded-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"></img>
-              <p className="text-neutral-400 mt-2">
-                Cyber security awareness is knowledge combined with attitudes and behaviors that serve to protect
-                our information assets. Being cybersecurity aware means you understand what the threats are and you
-                take the right steps to prevent them.
-              </p>
-            </div>
+                the tools they have learned during their training."
+              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+              rotate="rotate-6"
+            />
+            <SlantCard
+              title="Capture the Flag"
+              description="A cyber security Capture The Flag(CTF) event is a competition between security
+                professionals and/or students learning about cyber security. This competition is used
+                as a learning tool for everyone who is interested in cyber security and can help sharpen
+                the tools they have learned during their training."
+              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+              rotate="rotate-6"
+            />
             <div className="col-span-1 pl-10 h-full flex flex-col justify-end">
               <div data-aos="slide-left" className="bg-neutral-100/10 h-1/4 rounded-l-full"></div>
             </div>
@@ -130,34 +154,33 @@ const Home: NextPage = () => {
             <div className="col-span-1 pr-10 h-full flex flex-col justify-end">
               <div data-aos="slide-right" className="bg-neutral-800 h-1/6 rounded-r-full"></div>
             </div>
-            <div className="col-span-1 bg-neutral-400/20 opacity-50 hover:opacity-100 h-full md:-rotate-6 p-3 rounded-lg">
-              <h3 className="text-xl font-bold text-neutral-300">Capture the Flag</h3>
-              <img className="mt-2 rounded-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"></img>
-              <p className="text-neutral-300 text-md mt-2">
-                A cyber security Capture The Flag(CTF) event is a competition between security
+            <SlantCard
+              title="Capture the Flag"
+              description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training.
-              </p>
-            </div>
-            <div className="col-span-1 bg-neutral-400/10 opacity-50 hover:opacity-100 h-full md:-rotate-6 rounded-lg p-3">
-              <h3 className="text-xl font-bold text-neutral-300">Cybersecurity for everyone</h3>
-              <img className="mt-2 rounded-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"></img>
-              <p className="text-neutral-300 mt-2">
-                Cyber security awareness is knowledge combined with attitudes and behaviors that serve to protect
-                our information assets. Being cybersecurity aware means you understand what the threats are and you
-                take the right steps to prevent them.
-              </p>
-            </div>
-            <div className="col-span-1 bg-neutral-400/5 opacity-50 hover:opacity-100 h-full md:-rotate-6 rounded-lg p-3">
-              <h3 className="text-xl font-bold text-neutral-300">Cybersecurity for everyone</h3>
-              <img className="mt-2 rounded-lg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"></img>
-              <p className="text-neutral-300 mt-2">
-                Cyber security awareness is knowledge combined with attitudes and behaviors that serve to protect
-                our information assets. Being cybersecurity aware means you understand what the threats are and you
-                take the right steps to prevent them.
-              </p>
-            </div>
+                the tools they have learned during their training."
+              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+              rotate="-rotate-6"
+            />
+            <SlantCard
+              title="Capture the Flag"
+              description="A cyber security Capture The Flag(CTF) event is a competition between security
+                professionals and/or students learning about cyber security. This competition is used
+                as a learning tool for everyone who is interested in cyber security and can help sharpen
+                the tools they have learned during their training."
+              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+              rotate="-rotate-6"
+            />
+            <SlantCard
+              title="Capture the Flag"
+              description="A cyber security Capture The Flag(CTF) event is a competition between security
+                professionals and/or students learning about cyber security. This competition is used
+                as a learning tool for everyone who is interested in cyber security and can help sharpen
+                the tools they have learned during their training."
+              image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+              rotate="-rotate-6"
+            />
             <div className="col-span-1 pl-10 h-full flex flex-col justify-center">
               <div data-aos="slide-left" className="bg-neutral-600/10 h-1/3 rounded-l-full"></div>
             </div>
