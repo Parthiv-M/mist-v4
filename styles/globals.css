@@ -27,7 +27,7 @@ p {
 }
 
 .gradient-text {
-    background: rgb(27,200,146);
+    background: rgb(27, 200, 146);
     background: linear-gradient(90deg, #7bdcbd, #0974b9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -49,6 +49,28 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+.text-3d {
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 2px 1px #7b7b7b,
+        1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 1px 1px #919191,
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+.gradient-background {
+    background: linear-gradient(90deg, #7bdcbd, #0974b9 100%);
 }
 
 /* width */

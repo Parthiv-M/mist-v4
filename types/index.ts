@@ -7,6 +7,7 @@ import { IconBarProps } from "./Icons";
 import { IconProps } from "./Icons";
 import PageHeaderProps from "./PageHeader";
 import OriginalsProps from "./Originals";
+import FlagShipType from "./Flagship";
 
 export type {
     MetaProps,
@@ -17,5 +18,6 @@ export type {
     IconBarProps,
     IconProps,
     PageHeaderProps,
-    OriginalsProps
+    OriginalsProps,
+    FlagShipType
 }
