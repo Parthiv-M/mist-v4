@@ -133,19 +133,19 @@ const Home: NextPage = () => {
           />
           <SlantCard
             title="Cybersecurity for Everyone"
-            description="A cyber security Capture The Flag(CTF) event is a competition between security
-                professionals and/or students learning about cyber security. This competition is used
-                as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training."
+            description="Being cyber aware implies that you understand what the cybersecurity threats are 
+            and you take informed decisions against them. We organise Cybersecurity for Everyone as a means 
+            to spread this very awareness. It deals with and elucidates the threats that the internet poses, 
+            the various ways in which the internet can spoof you, and informs attendees of the safeguard measures."
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
             rotate="rotate-6"
           />
           <SlantCard
             title="Live Workshops"
-            description="A cyber security Capture The Flag(CTF) event is a competition between security
-                professionals and/or students learning about cyber security. This competition is used
-                as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training."
+            description="At MIST, we believe in hands-on learning. We organise a range of workshops, free of cost 
+            and accessible to the student community that deal with the basics of cybersecurity, networking, as well 
+            as scripting, development and deployment practices. We also conduct several internal workshops for the 
+            benefit of our team members."
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
             rotate="rotate-6"
           />
@@ -157,28 +157,27 @@ const Home: NextPage = () => {
           </div>
           <SlantCard
             title="Web Development"
-            description="A cyber security Capture The Flag(CTF) event is a competition between security
-                professionals and/or students learning about cyber security. This competition is used
-                as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training."
+            description="Web development is the creation and subsequent maintenance of websites. 
+            We involve ourselves in making a website look great, respond fast and perform well 
+            with a seamless user experience. It is the work that goes on behind the scenes of every 
+            awesome website and project that we take up at MIST."
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
             rotate="-rotate-6"
           />
           <SlantCard
             title="Networking"
-            description="A cyber security Capture The Flag(CTF) event is a competition between security
-                professionals and/or students learning about cyber security. This competition is used
-                as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training."
+            description="Computer networking refers to connected computing devices (such as laptops, desktops, 
+              servers, smartphones, and tablets) and an ever-expanding array of IoT devices (such as cameras, 
+                door locks and sensors) that communicate with one another. Networking is the backbone 
+                of the internet itself."
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
             rotate="-rotate-6"
           />
           <SlantCard
             title="Game Nights"
-            description="A cyber security Capture The Flag(CTF) event is a competition between security
-                professionals and/or students learning about cyber security. This competition is used
-                as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training."
+            description="MIST organizes gaming nights every once in a while, which serve as a bonding experience 
+            between the club members. It involves various games for every type of enthusiast. From combats in 
+            Valorant to screwing up drawings in scribble. Whatever you feel like playing, you will always find company."
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
             rotate="-rotate-6"
           />
