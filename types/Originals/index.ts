@@ -4,6 +4,7 @@ interface OriginalsProps {
     speakers: string[],
     hosts: string[],
     description: string,
+    contentType: string,
     link: string,
 }
 
