@@ -12,14 +12,14 @@ const Team = (props: any) => {
             <PageHeader title="Meet the Team" subtitle="Get to know these amazing members who make the club what it is." isCenter={true} />
             {/* Rendering Board section */}
             <div className="pt-20">
-                <div className="flex gap-2 justify-center items-center">
+                <div data-aos="fade-down" className="flex gap-2 justify-center items-center">
                     <div className="h-6 w-10 bg-neutral-100 reverse-gradient-block rounded-l-full"></div>
                     <h2 className="text-3xl text-neutral-300 uppercase tracking-widest font-extrabold">
                         The Board
                     </h2>
                     <div className="h-6 w-10 bg-neutral-100 gradient-block rounded-r-full"></div>
                 </div>
-                <p className="w-full px-5 md:w-1/2 mx-auto text-neutral-500">
+                <p data-aos="fade-down" className="w-full px-5 md:w-1/2 mx-auto text-neutral-500">
                     We represent, look over and manage the entire club. It's just a fancy
                     way of saying we do nothing important at all other than bossing people
                     around, and we love it because we have earned it after being badgered
@@ -43,14 +43,14 @@ const Team = (props: any) => {
 
             {/* Rendering ManComm section */}
             <div className="pt-20">
-                <div className="flex gap-2 justify-center items-center">
+                <div data-aos="fade-down" className="flex gap-2 justify-center items-center">
                     <div className="h-6 w-10 bg-neutral-100 reverse-gradient-block rounded-l-full"></div>
                     <h2 className="text-3xl text-neutral-300 uppercase tracking-widest font-extrabold">
                         The Management Committee
                     </h2>
                     <div className="h-6 w-10 bg-neutral-100 gradient-block rounded-r-full"></div>
                 </div>
-                <p className="w-full px-5 md:w-1/2 mx-auto text-neutral-500">
+                <p data-aos="fade-down" className="w-full px-5 md:w-1/2 mx-auto text-neutral-500">
                     Even the Board agrees that we do the most work in the club, but they
                     would never admit it publicly. We are the hardest working people in
                     the club. We slog through this hardship to qualify for the board seats
@@ -73,14 +73,14 @@ const Team = (props: any) => {
 
             {/* Rendering WorkComm section */}
             <div className="pt-20">
-                <div className="flex gap-2 justify-center items-center">
+                <div data-aos="fade-down" className="flex gap-2 justify-center items-center">
                     <div className="h-6 w-10 bg-neutral-100 reverse-gradient-block rounded-l-full"></div>
                     <h2 className="text-3xl text-neutral-300 uppercase tracking-widest font-extrabold">
                         The Working Committee
                     </h2>
                     <div className="h-6 w-10 bg-neutral-100 gradient-block rounded-r-full"></div>
                 </div>
-                <p className="w-full px-5 md:w-1/2 mx-auto text-neutral-500">
+                <p data-aos="fade-down" className="w-full px-5 md:w-1/2 mx-auto text-neutral-500">
                     We are college freshers, and joining more than one club is the strict
                     rule most of us follow. It is insurance for when things start getting
                     difficult in one club. We are the most volatile members of any club.

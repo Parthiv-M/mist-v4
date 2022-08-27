@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="mx-auto min-h-screen pt-20">
-      <div style={{zIndex: 0}} className="gradient-back fixed flex flex-col items-center justify-center md:px-16 py-20 min-h-screen w-screen">
+      <div style={{ zIndex: 0 }} className="gradient-back fixed top-0 flex flex-col items-center justify-center md:px-16 py-20 min-h-screen w-screen">
         <div className="w-2/3 flex md:flex-row flex-col justify-center items-center gap-2 hover:gap-4 mx-auto trasition ease-in-out duration-500">
           <div data-aos="fade-left" className="text-right text-neutral-600/25 md:block hidden">
             <h1 className="md:text-6xl text-4xl font-extrabold">CTF</h1>
@@ -68,7 +68,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-          <h6 className="hashtag-wearemist mt-12 text-5xl font-extrabold text-blue-100">#wearemist</h6>
+        <h6 className="hashtag-wearemist mt-12 text-5xl font-extrabold text-blue-100">#wearemist</h6>
       </div>
       <div style={{ backdropFilter: `blur(${blur}px)`, zIndex: 2 }} className={`h-screen w-screen flex flex-col items-center justify-end py-24`}>
         <img src="/images/logoLight.png" className="h-10 mx-auto" />
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
             rotate="rotate-6"
           />
           <SlantCard
-            title="Capture the Flag"
+            title="Cybersecurity for Everyone"
             description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
@@ -141,7 +141,7 @@ const Home: NextPage = () => {
             rotate="rotate-6"
           />
           <SlantCard
-            title="Capture the Flag"
+            title="Live Workshops"
             description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
@@ -152,13 +152,11 @@ const Home: NextPage = () => {
           <div className="col-span-1 pl-10 h-full flex flex-col justify-end">
             <div data-aos="slide-left" className="gradient-background h-1/4 rounded-l-full"></div>
           </div>
-        </div>
-        <div className="grid md:grid-cols-5 grid-cols-1 md:gap-1 gap-3 md:py-10 md:px-0 px-4">
           <div className="col-span-1 pr-10 h-full flex flex-col justify-end">
             <div data-aos="slide-right" className="gradient-background h-1/6 rounded-r-full"></div>
           </div>
           <SlantCard
-            title="Capture the Flag"
+            title="Web Development"
             description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
@@ -167,7 +165,7 @@ const Home: NextPage = () => {
             rotate="-rotate-6"
           />
           <SlantCard
-            title="Capture the Flag"
+            title="Networking"
             description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
@@ -176,7 +174,7 @@ const Home: NextPage = () => {
             rotate="-rotate-6"
           />
           <SlantCard
-            title="Capture the Flag"
+            title="Game Nights"
             description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
                 as a learning tool for everyone who is interested in cyber security and can help sharpen
