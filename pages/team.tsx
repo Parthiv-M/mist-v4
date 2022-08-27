@@ -88,7 +88,7 @@ const Team = (props: any) => {
                     information for us, although it is a fact that we do more work than
                     the Board.
                 </p>
-                <div className="p-2 mt-12 grid grid-cols-1 md:grid-cols-4 gap-1 mx-auto">
+                <div className="p-2 mt-12 grid grid-cols-1 md:grid-cols-5 gap-1 mx-auto">
                     {props?.workcomm.data.map((item: any) => (
                         <WCCard
                             name={item.name}
