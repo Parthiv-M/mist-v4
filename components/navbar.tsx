@@ -39,7 +39,7 @@ const Navbar = () => {
   });
 
   const closeNavbar = () => {
-    document?.getElementById("headlessui-disclosure-button-1")?.click();
+    (document?.getElementsByClassName("burger")[0] as HTMLFormElement).click();
   };
 
   const [animateHeader, setAnimateHeader] = useState(false);
@@ -61,7 +61,7 @@ const Navbar = () => {
       {/* <EventSnackbar />  */}
       <Disclosure
         as="nav"
-        className={`w-full backdrop-filter backdrop-blur-lg bg-[#121212]/60 fixed z-10 trasition ease-in-out duration-500 
+        className={`w-full backdrop-filter backdrop-blur-lg bg-[#121212]/90 fixed z-10 trasition ease-in-out duration-500 
           ${animateHeader && "shadow-xl"}`}
         id="nav"
         style={{ zIndex: "1000" }}
@@ -73,12 +73,12 @@ const Navbar = () => {
               <div className="relative flex items-center justify-center h-16">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="burger inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <i className="fas fa-times"></i>
+                      <i className="fas fa-times text-lg"></i>
                     ) : (
-                      <i className="fas fa-bars"></i>
+                      <i className="fas fa-bars text-lg"></i>
                     )}
                   </Disclosure.Button>
                 </div>
@@ -129,7 +129,7 @@ const Navbar = () => {
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
             >
-              <Disclosure.Panel className="md:hidden">
+              <Disclosure.Panel className="md:hidden h-screen flex flex-col justify-center">
                 <div className="px-2 pt-2 pb-3">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
@@ -137,8 +137,8 @@ const Navbar = () => {
                         onClick={closeNavbar}
                         className={
                           currentPage === item.match
-                            ? "text-green-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                            ? "text-green-300 hover:text-white block px-3 py-2 rounded-md text-2xl font-medium"
+                            : "text-gray-300 hover:text-white block px-3 py-2 rounded-md text-xl font-medium"
                         }
                         aria-current="page"
                       >

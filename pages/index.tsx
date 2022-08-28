@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 // importing components
 import FlagShipCard from '../components/flagshipCard';
-import Footer from '../components/footer';
 
 const Home: NextPage = () => {
 
