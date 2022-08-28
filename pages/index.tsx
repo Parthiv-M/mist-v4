@@ -54,16 +54,16 @@ const Home: NextPage = () => {
             <h1 className="md:text-6xl text-4xl font-extrabold">DEV</h1>
           </div>
           <div>
-            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3">MANIPAL</h1>
+            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 neon">MANIPAL</h1>
             <div data-aos="fade-left" className="flex gap-3 md:hidden block">
               <h1 className="text-neutral-600/25 md:text-6xl text-4xl font-extrabold">CTF</h1>
               <h1 className="text-neutral-600/25 md:text-6xl text-4xl font-extrabold">NETSEC</h1>
             </div>
-            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold">INFORMATION</h1>
-            <h2 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold">SECURITY</h2>
+            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold neon">INFORMATION</h1>
+            <h2 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold neon">SECURITY</h2>
             <h1 data-aos="fade-right" className="md:hidden block text-neutral-600/25 md:text-6xl text-4xl font-extrabold">PENTESTING</h1>
             <div className="flex gap-3">
-              <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold">TEAM</h1>
+              <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold neon">TEAM</h1>
               <h1 data-aos="fade-left" className="md:hidden block text-neutral-600/25 md:text-6xl text-4xl font-extrabold">DEV</h1>
             </div>
           </div>
