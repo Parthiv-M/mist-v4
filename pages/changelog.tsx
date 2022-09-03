@@ -20,6 +20,11 @@ const ChangeLog: NextPage = () => {
     }) => {
         return (
             <div data-aos="fade-up" className="mt-4">
+                <Meta 
+                    title="Changelog | wearemist.in"
+                    extraKeywords="changelog, versions, developers"
+                    description="Take a look at all the versions of the MIST website and discover the developers behind each of them"
+                />
                 <h4 className="font-bold underline">Version {props?.versionNumber}</h4>
                 <div className="mt-1 flex gap-1 flex-wrap">
                     {

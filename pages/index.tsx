@@ -3,14 +3,15 @@ import { useEffect, useState } from 'react';
 
 // importing components
 import FlagShipCard from '../components/flagshipCard';
+import Meta from '../components/meta';
 
 const Home: NextPage = () => {
 
-  const [blur, setBlur] = useState<any>(0);
+  const [blur, setBlur] = useState<any>(100);
 
   useEffect(() => {
     const handleScroll = () => {
-      setBlur(window.scrollY / 30);
+      setBlur(100 - (Math.floor(window.scrollY/5)));
     }
     window.addEventListener('scroll', handleScroll);
   }, [])
@@ -43,37 +44,48 @@ const Home: NextPage = () => {
   }
 
   return (
-    <div className="mx-auto min-h-screen pt-20">
-      <div style={{ zIndex: 0 }} className="gradient-back fixed top-0 flex flex-col items-center justify-center md:px-16 py-20 min-h-screen w-screen">
+    <div className="mx-auto min-h-screen pt-20 bg-[#121212]">
+      <Meta 
+        title="Manipal Information Security Team"
+        description="We are MIST—Manipal Institute of Technology's official cybersecurity club"
+        extraKeywords={'mist, wearemist, cybersecurity, club, manipal, mit, cybersec, networking, dev, information security'}
+      />
+      <div style={{ zIndex: 0 }} className="gradient-back absolute top-0 flex flex-col items-center justify-center md:px-16 py-20 min-h-screen w-screen">
         <div className="w-2/3 flex md:flex-row flex-col justify-center items-center gap-2 hover:gap-4 mx-auto trasition ease-in-out duration-500">
-          <div data-aos="fade-left" className="text-right text-neutral-600/25 md:block hidden">
+          <div data-aos="fade-left" className="text-right text-neutral-500/25 md:block hidden">
             <h1 className="md:text-6xl text-4xl font-extrabold">CTF</h1>
             <h2 className="md:text-6xl text-4xl font-extrabold">NETSEC</h2>
             <h1 className="md:text-6xl text-4xl font-extrabold">PENTESTING</h1>
             <h1 className="md:text-6xl text-4xl font-extrabold">DEV</h1>
           </div>
           <div>
-            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 neon">MANIPAL</h1>
+            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold hover:ml-3 flicker">
+              M<span className="fast-flicker">A</span>NIPAL
+            </h1>
             <div data-aos="fade-left" className="flex gap-3 md:hidden block">
-              <h1 className="text-neutral-600/25 md:text-6xl text-4xl font-extrabold">CTF</h1>
-              <h1 className="text-neutral-600/25 md:text-6xl text-4xl font-extrabold">NETSEC</h1>
+              <h1 className="text-neutral-500/25 md:text-6xl text-4xl font-extrabold">CTF</h1>
+              <h1 className="text-neutral-500/25 md:text-6xl text-4xl font-extrabold">NETSEC</h1>
             </div>
-            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold neon">INFORMATION</h1>
-            <h2 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold neon">SECURITY</h2>
-            <h1 data-aos="fade-right" className="md:hidden block text-neutral-600/25 md:text-6xl text-4xl font-extrabold">PENTESTING</h1>
+            <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold flicker">
+              INFOR<span className="fast-flicker">M</span>ATI<span className="fast-flicker">O</span>N
+            </h1>
+            <h2 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold fast-flicker">
+              SEC<span className="flicker">U</span>RITY
+            </h2>
+            <h1 data-aos="fade-right" className="md:hidden block text-neutral-500/25 md:text-6xl text-4xl font-extrabold">PENTESTING</h1>
             <div className="flex gap-3">
-              <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold neon">TEAM</h1>
-              <h1 data-aos="fade-left" className="md:hidden block text-neutral-600/25 md:text-6xl text-4xl font-extrabold">DEV</h1>
+              <h1 data-aos="fade-right" className="text-neutral-200 md:text-6xl text-4xl font-extrabold flicker">TEAM</h1>
+              <h1 data-aos="fade-left" className="md:hidden block text-neutral-500/25 md:text-6xl text-4xl font-extrabold">DEV</h1>
             </div>
           </div>
         </div>
         <h6 className="hashtag-wearemist mt-12 text-5xl font-extrabold text-blue-100">#wearemist</h6>
       </div>
-      <div style={{ backdropFilter: `blur(${blur}px)`, zIndex: 2 }} className={`h-screen w-screen flex flex-col items-center justify-end py-24`}>
+      <div style={{ backdropFilter: `brightness(${blur}%)`, zIndex: 0 }} className={`h-screen relative w-screen flex flex-col items-center justify-end py-24`}>
         <img src="/images/logoLight.png" className="h-10 mx-auto" />
         <p className="font-extrabold -ml-2 text-white">wearemist.in</p>
       </div>
-      <div className="backdrop-filter backdrop-blur-none min-h-screen w-screen pb-20 z-20 bg-[#121212]">
+      <div className="min-h-screen w-screen pb-20">
         <div className="grid md:grid-cols-2 grid-cols-1 md:p-16 p-4 gap-5">
           <div data-aos="fade-up" className="flex flex-col">
             <h3 className="text-3xl text-3d font-bold text-neutral-300">WHAT IS MIST</h3>
@@ -248,23 +260,19 @@ const Home: NextPage = () => {
       </div>
       <style jsx>{`
         .gradient-back {
+          background: -webkit-linear-gradient(top, #121212 0%, #191f22ab 30%, #191f22ab 70%, #121212 100%);
           background: linear-gradient(180deg, #121212 0%, #191f22ab 30%, #191f22ab 70%, #121212 100%);
         }
         .hashtag-wearemist {
+          background: -webkit-linear-gradient(125deg, #7bdcbd, #0974b9);
           background: linear-gradient(325deg, #7bdcbd, #0974b9);
           background-size: 400% 400%;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           -webkit-animation: gradient-scroll 3s ease infinite;
-          -moz-animation: gradient-scroll 3s ease infinite;
           animation: gradient-scroll 3s ease infinite;
         }
         @-webkit-keyframes gradient-scroll {
-            0%{background-position:0% 13%}
-            50%{background-position:100% 88%}
-            100%{background-position:0% 13%}
-        }
-        @-moz-keyframes gradient-scroll {
             0%{background-position:0% 13%}
             50%{background-position:100% 88%}
             100%{background-position:0% 13%}

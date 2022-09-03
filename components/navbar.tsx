@@ -61,7 +61,7 @@ const Navbar = () => {
       {/* <EventSnackbar />  */}
       <Disclosure
         as="nav"
-        className={`w-full backdrop-filter backdrop-blur-lg bg-[#121212]/90 fixed z-10 trasition ease-in-out duration-500 
+        className={`w-full backdrop-filter backdrop-blur-lg bg-[#121212]/75 fixed z-10 trasition ease-in-out duration-500 
           ${animateHeader && "shadow-xl"}`}
         id="nav"
         style={{ zIndex: "1000" }}
@@ -142,7 +142,7 @@ const Navbar = () => {
                         }
                         aria-current="page"
                       >
-                        {item.name}
+                        <span><div className={`rounded-full inline-block h-1 w-1 ${currentPage === item.match ? "bg-green-300 animate-pulse" : ""}`}></div></span> {item.name}
                       </a>
                     </Link>
                   ))}

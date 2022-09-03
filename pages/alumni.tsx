@@ -34,13 +34,13 @@ const Network = (props: any) => {
         return (
             <div className="py-5 mt-4" key={batch} id={batch}>
                 <div className="text-center">
-                    <h2 data-aos="fade-down" className="text-3xl font-black gradient-text cabin font-semibold">
-                        <Link href={"/alumni#" + batch}>
-                            <a>
-                                <i className="fas fa-link text-md"></i>
-                            </a>
-                        </Link>{" "}
+                    <h2 className="text-3xl font-black gradient-text cabin font-semibold">
                         Board of {batch}
+                        {" "}<Link href={"/alumni#" + batch}>
+                            <a>
+                                <i className="fas fa-link py-1 text-md"></i>
+                            </a>
+                        </Link>
                     </h2>
                 </div>
                 <div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 md:gap-3 gap-1 mx-auto">
@@ -73,7 +73,7 @@ const Network = (props: any) => {
             initial="hidden"
             animate="enter"
             exit="exit"
-            variants={variants} 
+            variants={variants}
             className="container mx-auto pt-20 min-h-screen text-center md:px-0 px-2"
         >
             <Meta

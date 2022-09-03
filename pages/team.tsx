@@ -5,10 +5,16 @@ import { GetStaticProps } from "next";
 import TeamCard from "../components/teamCard";
 import WCCard from "../components/wcCard";
 import PageHeader from "../components/pageHeader";
+import Meta from "../components/meta";
 
 const Team = (props: any) => {
     return (
         <div className="text-center container mx-auto text-gray-50 py-20 md:px-8 min-h-screen">
+            <Meta 
+                title="The Team | MIST"
+                description="Get to know these amazing members who make the club what it is and what it stands for"
+                extraKeywords="team, wearemist, our team, club"
+            />
             <PageHeader title="Meet the Team" subtitle="Get to know these amazing members who make the club what it is." isCenter={true} />
             {/* Rendering Board section */}
             <div className="pt-20">

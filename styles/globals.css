@@ -28,6 +28,7 @@ p {
 
 .gradient-text {
     background: rgb(27, 200, 146);
+    background: -webkit-linear-gradient(left, #7bdcbd, #0974b9 100%);
     background: linear-gradient(90deg, #7bdcbd, #0974b9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -70,6 +71,7 @@ a {
 }
 
 .gradient-background {
+    background: -webkit-linear-gradient(left, #7bdcbd, #0974b9 100%);
     background: linear-gradient(90deg, #7bdcbd, #0974b9 100%);
 }
 
@@ -95,153 +97,404 @@ a {
 
 /* blinking neon text */
 
-.neon {
-    -webkit-animation: blinkH1 5s infinite;
-    animation: blinkH1 5s infinite;
-}
+@-webkit-keyframes blink {
 
-.neon:after {
-    -webkit-animation: blinkH1After 5s infinite;
-    animation: blinkH1After 5s infinite;
-}
-
-.neon:before {
-    -webkit-animation: blinkH1Before 5s infinite;
-    animation: blinkH1Before 5s infinite;
-}
-
-@-webkit-keyframes blinkH1 {
-    0% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
+    0%,
+    22%,
+    36%,
+    75% {
+        color: #deecf6;
+        text-shadow: 0 0 0.6rem #5cb2ec, 0 0 1.5rem #0974b9,
+            -0.2rem 0.1rem 1rem #0974b9, 0.2rem 0.1rem 1rem #43a7e9,
+            0 -0.5rem 2rem #0974b9, 0 0.5rem 3rem #0974b9;
     }
 
-    19% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
-    }
-
-    20% {
-        color: #9E9E9E;
+    28%,
+    33% {
+        color: #deecf6;
         text-shadow: none;
     }
 
-    21% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
-    }
-
-    60% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
-    }
-
-    61% {
-        color: #9E9E9E;
+    82%,
+    97% {
+        color: #deecf6;
         text-shadow: none;
-    }
-
-    62% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
-    }
-
-    63% {
-        color: #9E9E9E;
-        text-shadow: none;
-    }
-
-    64% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
-    }
-
-    100% {
-        color: #fff;
-        text-shadow: 0px 0px 20px #00aad4;
     }
 }
 
-@-webkit-keyframes blinkH1After {
-    0% {
-        color: #00aad4;
+@keyframes blink {
+
+    0%,
+    22%,
+    36%,
+    75% {
+        color: #deecf6;
+        text-shadow: 0 0 0.6rem #5cb2ec, 0 0 1.5rem #0974b9,
+            -0.2rem 0.1rem 1rem #0974b9, 0.2rem 0.1rem 1rem #43a7e9,
+            0 -0.5rem 2rem #0974b9, 0 0.5rem 3rem #0974b9;
     }
 
-    19% {
-        color: #00aad4;
+    28%,
+    33% {
+        color: #deecf6;
+        text-shadow: none;
     }
 
-    20% {
-        color: transparent;
-    }
-
-    21% {
-        color: #00aad4;
-    }
-
-    60% {
-        color: #00aad4;
-    }
-
-    61% {
-        color: transparent;
-    }
-
-    62% {
-        color: #00aad4;
-    }
-
-    63% {
-        color: transparent;
-    }
-
-    64% {
-        color: #00aad4;
-    }
-
-    100% {
-        color: #00aad4;
+    82%,
+    97% {
+        color: #deecf6;
+        text-shadow: none;
     }
 }
 
-@-webkit-keyframes blinkH1Before {
+.flicker {
+    -webkit-animation: shine 2s forwards, blink 3s 2s infinite;
+            animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+    -webkit-animation: shine 2s forwards, blink 10s 1s infinite;
+            animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@-webkit-keyframes shine {
     0% {
-        background: #00aad4;
-    }
-
-    19% {
-        background: #00aad4;
-    }
-
-    20% {
-        background: transparent;
-    }
-
-    21% {
-        background: #00aad4;
-    }
-
-    60% {
-        background: #00aad4;
-    }
-
-    61% {
-        background: transparent;
-    }
-
-    62% {
-        background: #00aad4;
-    }
-
-    63% {
-        background: transparent;
-    }
-
-    64% {
-        background: #00aad4;
+        color: #deecf6;
+        text-shadow: none;
     }
 
     100% {
-        background: #00aad4;
+        color: #deecf6;
+        text-shadow: 0 0 0.6rem #81b9de, 0 0 1.5rem #b7dff9,
+            -0.2rem 0.1rem 1rem #0974b9, 0.2rem 0.1rem 1rem #0974b9,
+            0 -0.5rem 2rem #91d1fb, 0 0.5rem 3rem #80c0eb;
+    }
+}
+
+@keyframes shine {
+    0% {
+        color: #deecf6;
+        text-shadow: none;
+    }
+
+    100% {
+        color: #deecf6;
+        text-shadow: 0 0 0.6rem #81b9de, 0 0 1.5rem #b7dff9,
+            -0.2rem 0.1rem 1rem #0974b9, 0.2rem 0.1rem 1rem #0974b9,
+            0 -0.5rem 2rem #91d1fb, 0 0.5rem 3rem #80c0eb;
+    }
+}
+
+@-webkit-keyframes flicker {
+    from {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    4% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    6% {
+        opacity: 0.85;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    }
+
+    8% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    10% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    11% {
+        opacity: 0.922;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+    }
+
+    12% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    14% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    16% {
+        opacity: 0.98;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=98)";
+    }
+
+    17% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    19% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    20% {
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    24% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    26% {
+        opacity: 0.94;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=94)";
+    }
+
+    28% {
+        opacity: 0.98;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=98)";
+    }
+
+    37% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    38% {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    }
+
+    39% {
+        opacity: 0.96;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=96)";
+    }
+
+    42% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    44% {
+        opacity: 0.97;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=97)";
+    }
+
+    46% {
+        opacity: 0.94;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=94)";
+    }
+
+    56% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    58% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    60% {
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    68% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    70% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    72% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    93% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    95% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    97% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    to {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes flicker {
+    from {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    4% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    6% {
+        opacity: 0.85;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    }
+
+    8% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    10% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    11% {
+        opacity: 0.922;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=92)";
+    }
+
+    12% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    14% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    16% {
+        opacity: 0.98;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=98)";
+    }
+
+    17% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    19% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    20% {
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    24% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    26% {
+        opacity: 0.94;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=94)";
+    }
+
+    28% {
+        opacity: 0.98;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=98)";
+    }
+
+    37% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    38% {
+        opacity: 0.5;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    }
+
+    39% {
+        opacity: 0.96;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=96)";
+    }
+
+    42% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    44% {
+        opacity: 0.97;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=97)";
+    }
+
+    46% {
+        opacity: 0.94;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=94)";
+    }
+
+    56% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    58% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    60% {
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    68% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    70% {
+        opacity: 0.9;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    }
+
+    72% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    93% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    95% {
+        opacity: 0.95;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+    }
+
+    97% {
+        opacity: 0.93;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    }
+
+    to {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     }
 }
