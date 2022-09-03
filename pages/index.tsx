@@ -288,6 +288,9 @@ const Home: NextPage = () => {
           background-size: cover;
           background-attachment: fixed;
         }        
+        @media only screen and (max-width: 800px) {
+          background-size: contain;
+        }
       `}</style>
     </div>
   )
