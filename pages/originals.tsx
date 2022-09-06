@@ -15,7 +15,7 @@ const MISTOriginals = (props: any) => {
                 description="Catch all the videos, podcasts, and other amazing content from the best creative minds at MIST."
                 extraKeywords="originals, mist originals, podcast, videos"
             />
-            <div className="mx-auto lg:p-10 p-4 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-2">
+            <div className="mx-auto lg:p-10 md:p-8 lg:p-10 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2">
                 {
                     props?.originals?.data?.map((data: any) => {
                         return <OriginalsCard {...data} />

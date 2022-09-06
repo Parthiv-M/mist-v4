@@ -30,7 +30,7 @@ const Announcements = (props: any) => {
                 setModalDetails={() => null}
                 setShowModal={setShowModal}
             />}
-            <div className="mx-auto lg:p-10 p-4 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-2">
+            <div className="mx-auto lg:p-10 p-4 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2">
                 {
                     props.announcements.data.map((data: any) => {
                         return <AnnouncementCard

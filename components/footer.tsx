@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="footer md:px-32 md:pt-32 md:pb-16 px-10 pt-10 pb-8 bg-neutral-900 backdrop-filter backdrop-blur-none" style={{zIndex: 1000}}>
+        <footer className="footer md:px-20 lg:px-32 md:pt-24 lg:pt-32 md:pb-16 px-10 pt-10 pb-8 bg-neutral-900 backdrop-filter backdrop-blur-none" style={{zIndex: 1000}}>
             <div className="min-h-52 text-gray-300 grid md:grid-cols-4 grid-cols-2 md:gap-2 gap-8">
                 <div className="flex flex-col items-start gap-2 text-sm">
                     <h5 className="text-neutral-600 font-bold">More from MIST</h5>

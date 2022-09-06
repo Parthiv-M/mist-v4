@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setBlur(100 - (Math.floor(window.scrollY/5)));
+      setBlur(100 - (Math.floor(window.scrollY / 5)));
     }
     window.addEventListener('scroll', handleScroll);
   }, [])
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <div className={`col-span-1 md:border-r md:border-t md:rounded-tr-lg md:border-0 border-b pb-5 border-neutral-700 md:opacity-50 
           hover:opacity-100 h-full md:${props?.rotate} p-3`}>
         <h3 className="text-xl font-bold text-neutral-200">{props?.title}</h3>
-        <img className="mt-2 rounded-lg" alt={props?.title} src={props?.image}></img>
+        <img className="mt-2 rounded-lg md:h-2/5 w-full" alt={props?.title} src={props?.image}></img>
         <p className="text-neutral-300 mt-2">
           {props?.description}
         </p>
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="mx-auto min-h-screen pt-20 bg-[#121212]">
-      <Meta 
+      <Meta
         title="Manipal Information Security Team"
         description="We are MIST—Manipal Institute of Technology's official cybersecurity club"
         extraKeywords={'mist, wearemist, cybersecurity, club, manipal, mit, cybersec, networking, dev, information security'}
@@ -137,18 +137,18 @@ const Home: NextPage = () => {
             title="Capture the Flag"
             description="A cyber security Capture The Flag(CTF) event is a competition between security
                 professionals and/or students learning about cyber security. This competition is used
-                as a learning tool for everyone who is interested in cyber security and can help sharpen
-                the tools they have learned during their training."
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+                as a learning tool by cyber security enthusiasts and can help sharpen and put to use 
+                the skills they have accumulated over the years."
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.redeszone.net%2Fapp%2Fuploads-redeszone.net%2F2020%2F02%2Fpentesting-de-redes.jpg&f=1&nofb=1"
             rotate="rotate-6"
           />
           <SlantCard
             title="Cybersecurity for Everyone"
-            description="Being cyber aware implies that you understand what the cybersecurity threats are 
-            and you take informed decisions against them. We organise Cybersecurity for Everyone as a means 
+            description="Being cyber aware in today's internet age implies that you understand what cyber threats involve and take 
+            proactive action against being caught in one. We organise Cybersecurity for Everyone as a means 
             to spread this very awareness. It deals with and elucidates the threats that the internet poses, 
-            the various ways in which the internet can spoof you, and informs attendees of the safeguard measures."
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+            the various ways in which the internet can spoof you, and informs attendees of the various safeguard measures."
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2F736x%2Fab%2F0b%2F82%2Fab0b825711a69a5f264dc205f4874688.jpg&f=1&nofb=1"
             rotate="rotate-6"
           />
           <SlantCard
@@ -157,7 +157,7 @@ const Home: NextPage = () => {
             and accessible to the student community that deal with the basics of cybersecurity, networking, as well 
             as scripting, development and deployment practices. We also conduct several internal workshops for the 
             benefit of our team members."
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+            image="/images/mistlabweb.jpg"
             rotate="rotate-6"
           />
           <div className="col-span-1 pl-10 h-full flex flex-col justify-end">
@@ -172,7 +172,7 @@ const Home: NextPage = () => {
             We involve ourselves in making a website look great, respond fast and perform well 
             with a seamless user experience. It is the work that goes on behind the scenes of every 
             awesome website and project that we take up at MIST."
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+            image="/images/webdev.jpg"
             rotate="-rotate-6"
           />
           <SlantCard
@@ -181,15 +181,15 @@ const Home: NextPage = () => {
               servers, smartphones, and tablets) and an ever-expanding array of IoT devices (such as cameras, 
                 door locks and sensors) that communicate with one another. Networking is the backbone 
                 of the internet itself."
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffthmb.tqn.com%2FBIikovPRnfZma_b8iGUoG25RriY%3D%2F3865x2576%2Ffilters%3Afill(auto%2C1)%2Fwifi-icon-and-city-scape-and-network-connection-concept--smart-city-and-wireless-communication-network--abstract-image-visual--internet-of-things-656121280-593c71943df78c537b4889a4.jpg&f=1&nofb=1"
             rotate="-rotate-6"
           />
           <SlantCard
             title="Game Nights"
             description="MIST organizes gaming nights every once in a while, which serve as a bonding experience 
             between the club members. It involves various games for every type of enthusiast. From combats in 
-            Valorant to screwing up drawings in scribble. Whatever you feel like playing, you will always find company."
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bigheartsoutdoors.org%2Fwp-content%2Fuploads%2F2019%2F10%2FRectangle-1920x1080-Placeholder.png&f=1&nofb=1"
+            Valorant to screwing up drawings in skribbl—whatever you feel like playing, you will always find company."
+            image="/images/gamenights.jpeg"
             rotate="-rotate-6"
           />
           <div className="col-span-1 pl-10 h-full flex flex-col justify-center">

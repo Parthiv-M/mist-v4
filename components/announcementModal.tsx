@@ -31,7 +31,7 @@ const AnnouncementModal = (props: AnnouncementProps) => {
                 initial="hidden"
                 animate="enter"
                 exit="exit"
-                variants={variants} className="md:w-1/3 py-6 px-4 flex flex-col items-start bg-neutral-800 rounded-lg shadow-xl"
+                variants={variants} className="md:w-2/3 lg:w-1/3 py-6 px-4 flex flex-col items-start bg-neutral-800 rounded-lg shadow-xl"
             >
                 <div className="w-full flex justify-between items-center">
                     <h6 className="text-sm gradient-text">{props?.date}</h6>

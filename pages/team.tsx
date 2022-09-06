@@ -70,7 +70,7 @@ const Team = (props: any) => {
 
             {/* Rendering ManComm section */}
             <div className="pt-20">
-                <div data-aos="fade-down" className="md:w-3/4 mx-auto flex gap-2 justify-center items-center">
+                <div data-aos="fade-down" className="md:w-full lg:w-3/4 mx-auto flex gap-2 justify-center items-center">
                     <div className="flex flex-col justify-center md:items-start items-center">
                         {mancommLength.length > 0 && <p style={{ fontSize: "15px" }} className="gradient-text md:hidden block">{mancommLength.length} ManComm members</p>}
                         <div className="flex items-center">
@@ -113,7 +113,7 @@ const Team = (props: any) => {
 
             {/* Rendering WorkComm section */}
             <div className="pt-20">
-                <div data-aos="fade-down" className="md:w-3/4 mx-auto flex gap-2 justify-center items-center">
+                <div data-aos="fade-down" className="md:w-full lg:w-3/4 mx-auto flex gap-2 justify-center items-center">
                     <div className="flex flex-col justify-center md:items-start items-center">
                         {workcommLength.length > 0 && <p style={{ fontSize: "15px" }} className="gradient-text md:hidden block">{workcommLength.length} WorkComm members</p>}
                         <div className="flex items-center">
@@ -141,7 +141,7 @@ const Team = (props: any) => {
                         <p style={{ fontSize: "12px" }} className="gradient-text">{workcommLength.length} WorkComm members</p>
                     </div>
                 </div>
-                <div className="p-2 mt-12 grid grid-cols-1 md:grid-cols-5 gap-1 mx-auto">
+                <div className="p-2 mt-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-1 mx-auto">
                     {props?.workcomm.data.map((item: any) => (
                         <WCCard
                             name={item.name}
